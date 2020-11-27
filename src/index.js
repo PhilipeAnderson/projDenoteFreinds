@@ -8,10 +8,6 @@ const session = require('express-session')
 const MySQLStore = require('express-mysql-session')
 const { database } = require('./keys')
 
-
-
-
-
 //initialization
 const app = express()
 

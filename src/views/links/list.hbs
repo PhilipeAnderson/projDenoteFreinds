@@ -9,7 +9,7 @@
                     <th class="col-md-2">WhatsApp</th>
                     <th class="col-md-2">Sugestões</th>
                     <th class="col-md-1">Indicou</th>
-                    <th class="col-md-1">Criado em:</th>
+                    {{!-- <th class="col-md-1">Criado em:</th> --}}
                     <th class="col-md-1">Editar</th>
                     <th class="col-md-1">Excluir</th>
                 </tr>
@@ -23,10 +23,10 @@
                 <tr>
                     <td class="col-md-2">{{title}}</td>
                     <td class="col-md-2">{{url}}</td>
-                    <td class="col-md-2">(48)95465212</td>
+                    <td class="col-md-2">{{whats}}</td>
                     <td class="col-md-2">{{description}}</td>
                     <td class="col-md-1">YES</td>
-                    <td class="col-md-1">{{timeago created_at}}</td>
+                    {{!-- <td class="col-md-1">{{timeago created_at}}</td> --}}
                     <td class="col-md-1"><a href="/links/edit/{{id}}" class="btn btn-secondary">Editar</a></td>
                     <td class="col-md-1"><a href="/links/delete/{{id}}" class="btn btn-danger">Excluir</a></td>
                 </tr>
