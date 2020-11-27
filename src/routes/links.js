@@ -8,12 +8,14 @@ router.get('/add', (req, res) => {
 })
 
 router.post('/add', async(req, res) => {
-    const { title, url, description, whats } = req.body
+    const { title, url, description, whats, gridRadios } = req.body
     const newLink  = {
         title,
         url,
         description,
-        whats
+        whats,
+        gridRadios
+
     }
     await pool.query("INSERT INTO links SET?", [newLink])
     req.flash('success', 'Sugestão criada com sucesso')
