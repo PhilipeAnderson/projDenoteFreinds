@@ -1,0 +1,52 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FEEBC8;
+}
+
+/* /RESET */
+
+/* TOPO */
+.header{
+    height: 160px;
+    width: 100%;
+    background-color: #edd96a;
+}
+/* /TOPO */
+
+/* MENU */
+.menu{
+    background-color: #F6AD55;
+    width: 100%;
+}
+#color-menu a{
+    color: #fff;
+}
+#color-menu a:hover{
+    color: #000;
+}
+/* /MENU */
+
+
+
+
+
+/* BODY */
+/* /BODY */
+
+
+
+
+
+/* FOOTER */
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: #dd6b20;
+}
+/* /FOOTER */
