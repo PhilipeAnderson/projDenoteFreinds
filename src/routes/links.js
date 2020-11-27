@@ -8,11 +8,12 @@ router.get('/add', (req, res) => {
 })
 
 router.post('/add', async(req, res) => {
-    const { title, url, description } = req.body
+    const { title, url, description, whats } = req.body
     const newLink  = {
         title,
         url,
-        description
+        description,
+        whats
     }
     await pool.query("INSERT INTO links SET?", [newLink])
     req.flash('success', 'Sugestão criada com sucesso')
@@ -27,7 +28,7 @@ router.get('/', async(req, res) => {
 router.get('/delete/:id', async(req,res) => {
     const { id } = req.params
     await pool.query("DELETE FROM links WHERE ID = ?", [id])
-    req.flash('success', 'Sugrstão excluída com sucesso')
+    req.flash('success', 'Sugestão excluída com sucesso')
     res.redirect('/links')
 })
 
@@ -39,11 +40,12 @@ router.get('/edit/:id', async(req,res) => {
 
 router.post('/edit/:id', async(req, res) => {
     const { id } = req.params
-    const {title, url, description} = req.body
+    const {title, url, description, whats} = req.body
     const newLink = {
         title,
         url,
-        description
+        description,
+        whats
     }
     await pool.query("UPDATE links SET ? WHERE ID = ?", [newLink, id])
     req.flash('success', 'Sugestão editada com sucesso')
@@ -64,21 +66,15 @@ router.get('/contact', (req, res) => {
 })
 
 /* AUTHENTICATION */
-router.get('/admin', (req, res) => {
-    res.render('links/admin')
-})
-
 router.post('/admin', async(req, res) => {
-    console.log(req.body)
-
-    // const { usernameUser, passwordUser } = req.body
-    // const newUser = {
-    //     usernameUser,
-    //     passwordUser
-    // }
-    // await pool.query("INSERT INTO users SET?", [newUser])
-    // req.flash('success', 'Usuário criada com sucesso')
-    // res.redirect('/links')
+    const { id } = req.params
+    const links = await pool.query("SELECT * FROM links WHERE ID = ?", [id])
+    if( links[0] == id ){
+        res.render('/links')
+    }else{
+        res.send('Usuário não cadastrado no sistema')
+    }
+    
 }) 
 
 module.exports = router

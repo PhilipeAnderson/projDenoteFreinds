@@ -5,13 +5,16 @@
                 <div class="card-body">
                     <form action="/links/add" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="title" placeholder="Title" autofocus>
+                            <input type="text" class="form-control" name="title" placeholder="Seu Nome" autofocus>
                         </div>
                         <div class="form-group">
-                            <input type="url" name="url" class="form-control" placeholder="URL">
+                            <input type="email" name="url" class="form-control" placeholder="Seu Email">
                         </div>
                         <div class="form-group">
-                            <textarea name="description" rows="2" class="form-control" placeholder="Description"></textarea>
+                            <input type="text" name="whats" class="form-control" placeholder="Seu Whats">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="description" rows="2" class="form-control" placeholder="Sua Sugestão"></textarea>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-success btn-block">Send</button>
