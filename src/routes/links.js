@@ -66,15 +66,15 @@ router.get('/contact', (req, res) => {
 })
 
 /* AUTHENTICATION */
-router.post('/admin', async(req, res) => {
-    const { id } = req.params
-    const links = await pool.query("SELECT * FROM links WHERE ID = ?", [id])
-    if( links[0] == id ){
-        res.render('/links')
-    }else{
-        res.send('Usuário não cadastrado no sistema')
-    }
+// router.post('/admin', async(req, res) => {
+//     const { id } = req.params
+//     const links = await pool.query("SELECT * FROM links WHERE ID = ?", [id])
+//     if( links[0] == id ){
+//         res.render('/links')
+//     }else{
+//         res.send('Usuário não cadastrado no sistema')
+//     }
     
-}) 
+// })
 
 module.exports = router

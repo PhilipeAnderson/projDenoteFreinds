@@ -1,3 +1,12 @@
+<div class="container p-4 text-center">
+    <h2>Críticas e sugestões</h2>
+    <p>
+        O restaurante Xsempre busca por atendermelhor seus clientes<br />
+        Por isso, estamos sempre abertos a ouvir a sua opinião.
+    </p>
+</div>
+
+
 <div class="container p-4">
     <div class="row">
         <div class="col-md-4 mx-auto">
@@ -14,10 +23,47 @@
                             <input type="text" name="whats" class="form-control" placeholder="Seu Whats">
                         </div>
                         <div class="form-group">
-                            <textarea name="description" rows="2" class="form-control" placeholder="Sua Sugestão"></textarea>
+                            <textarea name="description" rows="2" class="form-control"
+                                placeholder="Sua Sugestão"></textarea>
                         </div>
+
+
+                        {{!-- BTN RADIO --}}
+
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <label for="exampleInputPassword1">&nbsp;&nbsp;&nbsp;&nbsp;Você indicaria a um
+                                    amigo?</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                            value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                            value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Não
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+
+
+
+
+
+
+
                         <div class="form-group">
-                            <button class="btn btn-success btn-block">Send</button>
+                            <button class="btn btn-success btn-block">Enviar</button>
                         </div>
                     </form>
                 </div>
