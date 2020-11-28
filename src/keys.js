@@ -8,9 +8,9 @@ module.exports = {
     // }
 
     database: {
-        host: 'localhost',
-        user: 'root',
-        password: '03288731959Pr@',
-        database: 'savelinks'
+        host: 'mysql741.umbler.com',
+        user: 'jaestaemuso',
+        password: '03288731959Pr',
+        database: 'denotefriends'
     }
 }
